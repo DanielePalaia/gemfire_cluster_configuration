@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cache PUBLIC
+    "-//GemStone Systems, Inc.//GemFire Declarative Caching 8.0//EN"
+    "http://www.gemstone.com/dtd/gfcpp-cache8000.dtd">
+<!-- Sample cache.xml file -->
+<!-- Example Declarative Cache Initialization with cache.xml -->
+<client-cache>
+<pool name="locatorPool">
+<locator host="localhost" port="10334"/>
+</pool>
+<region name=”Cars">
+<region-attributes refid="LOCAL" pool-name="locatorPool"/>
+</region>
+<region name="Manufacturers">
+<region-attributes refid="LOCAL"/>
+</region>
+

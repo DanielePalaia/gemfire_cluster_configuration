@@ -1,0 +1,125 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          gemfire-locator
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Short-Description: Gemfire Locator
+# Description:       Controls a Gemfire Locator
+### END INIT INFO
+
+export GEMFIRE="/Users/dpalaia/ericsson/gemfire-scripts/collev"
+export GEMFIRE_CONFIG="/Users/dpalaia/ericsson/gemfire-scripts/collev/config/"
+export GEMFIRE_DATA="/Users/dpalaia/ericsson/gemfire-scripts/collev/"
+export DAEMON_USER="gemfire"
+#if [ "$UID" != "$DAEMON_USERID" ]; then
+#	echo "Running as $DAEMON_USER"
+#	sudo -u "$DAEMON_USER" -- $0 $@
+#	exit $?
+#fi
+
+export SERVICE_NAME="loccollev1"
+export SERVICE_TYPE="locator"
+export SERVICE_OPTIONS="--initial-heap=128m --max-heap=512m --properties-file='$GEMFIRE_CONFIG/locator/gemfire.properties' --port=10334"
+export SERVICE_PID_FILE="$GEMFIRE_DATA/$SERVICE_NAME/vf.gf.$SERVICE_TYPE.pid"
+export CONNECT_OPTIONS=""
+
+# export JAVA_HOME="/usr/local/Cellar/openjdk/14.0.1/"
+# export GF_JAVA="$JAVA_HOME/bin/java"
+export PATH=$PATH:$GEMFIRE/bin
+cd "$GEMFIRE_DATA"
+
+doStart() {
+	output=$(gfsh -e "start $SERVICE_TYPE $SERVICE_OPTIONS --name='$SERVICE_NAME'")
+	gfsh_ret=$?
+	[ $gfsh_ret -ne 0 ] && echo "$output"
+	return $gfsh_ret
+}
+
+doStop() {
+	if [ ! -f "$SERVICE_PID_FILE" ]; then
+		echo "PID File not found: $SERVICE_PID_FILE"
+		echo "Service doesn't run?"
+		return 0
+	fi
+	SERVICE_PID=$(cat "$SERVICE_PID_FILE")
+
+	output=$(gfsh -e "stop $SERVICE_TYPE --dir='$SERVICE_NAME'")
+	gfsh_ret=$?
+	grep -qi "Connection refused" <<<$output
+	if [ $? -eq 0 ]; then
+		# already stopped if gfsh can't connect
+		return 0
+	else
+		if [ $gfsh_ret -ne 0 ]; then
+			echo "$output"
+		else
+			if [ -d "/proc/$SERVICE_PID" ]; then
+				echo "Process $SERVICE_PID still running. Killing it..."
+				[ -n "$SERVICE_PID" ] && kill -9 $SERVICE_PID
+				rm -f $SERVICE_PID_FILE
+			fi
+		fi
+                rm -f $SERVICE_PID_FILE
+		return $gfsh_ret
+	fi
+}
+
+doStatus() {
+	output=$(gfsh -e "status $SERVICE_TYPE --dir='$SERVICE_NAME'" 2>&1)
+	gfsh_ret=$?
+	grep -qi "null" <<<$output
+	if [ $? -eq 0 ]; then
+		echo "Service $SERVICE_NAME is STOPPED"
+		return 0
+	else
+		echo "$output"
+		return $gfsh_ret
+	fi
+}
+
+case "$1" in
+	start)
+		echo "Starting $SERVICE_TYPE/$SERVICE_NAME"
+		doStart
+		if [ $? -eq 0 ]; then
+			echo "Service $SERVICE_TYPE/$SERVICE_NAME STARTED"
+		else
+			echo "START FAILED"
+		fi
+	;;
+	stop)
+		echo "Stopping $SERVICE_TYPE/$SERVICE_NAME"
+		doStop
+		if [ $? -eq 0 ]; then
+			echo "Service $SERVICE_TYPE/$SERVICE_NAME STOPPED"
+		else
+			echo "STOP FAILED"
+		fi
+	;;
+	restart)
+		echo "Stopping $SERVICE_TYPE/$SERVICE_NAME"
+		doStop
+		if [ $? -eq 0 ]; then
+			echo "Service $SERVICE_TYPE/$SERVICE_NAME STOPPED"
+		else
+			echo "STOP FAILED"
+		fi
+
+		echo "Starting $SERVICE_TYPE/$SERVICE_NAME"
+		doStart
+		if [ $? -eq 0 ]; then
+			echo "Service $SERVICE_TYPE/$SERVICE_NAME STARTED"
+		else
+			echo "START FAILED"
+		fi
+	;;
+	status)
+		doStatus
+	;;
+	*)
+	echo "Usage: $0 {start|stop|restart|status}"
+	exit 1
+	;;
+esac
+
+exit 0

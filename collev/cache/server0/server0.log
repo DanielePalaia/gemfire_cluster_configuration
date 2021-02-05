@@ -1,0 +1,149 @@
+
+[info 2020/11/27 16:55:42.289 CET server0 <main> tid=0x1] Renamed old log file to "/Users/dpalaia/ericsson/gemfire-scripts/collev/cache/server0/server0-01-01.log".
+
+[info 2020/11/27 16:55:42.307 CET server0 <main> tid=0x1] 
+  ---------------------------------------------------------------------------
+    
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with this
+    work for additional information regarding copyright ownership.
+     
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with the
+    License.  You may obtain a copy of the License at
+    
+    http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+    License for the specific language governing permissions and limitations
+    under the License.
+    
+  ---------------------------------------------------------------------------
+  Build-Date: 2017-11-10 15:27:32 +0000
+  Build-Id: root 39
+  Build-Java-Version: 1.8.0_144
+  Build-Platform: Linux 4.4.0-62-generic amd64
+  GemFire-Source-Date: 2017-11-10 15:25:20 +0000
+  GemFire-Source-Repository: support/9.2
+  GemFire-Source-Revision: d7583a1c3b950dc669fa3d4b91662e1608766a82
+  Product-Name: Pivotal GemFire
+  Product-Version: 9.2.0
+  Source-Date: 2017-11-08 17:59:30 +0000
+  Source-Repository: support/9.2
+  Source-Revision: c7aaad200acb18f8e44e25557815d0d365f95ce6
+  Native version: native code unavailable
+  Running on: /192.168.1.7, 8 cpu(s), x86_64 Mac OS X 10.15.6 
+  Communications version: 70
+  Process ID: 60235
+  User: dpalaia
+  Current dir: /Users/dpalaia/ericsson/gemfire-scripts/collev/cache/server0
+  Home dir: /Users/dpalaia
+  Command Line Parameters:
+    -Dgemfire.start-dev-rest-api=false
+    -Dgemfire.use-cluster-configuration=true
+    -Dgemfire.cache-xml-file=/Users/dpalaia/ericsson/gemfire-scripts/collev/cache/cache.xml
+    -XX:OnOutOfMemoryError=kill -KILL %p
+    -Dgemfire.launcher.registerSignalHandlers=true
+    -Djava.awt.headless=true
+    -Dsun.rmi.dgc.server.gcInterval=9223372036854775806
+  Class Path:
+    /usr/local/Cellar/gemfire/9.2.0/libexec/lib/geode-core-9.2.0.jar
+    /usr/local/Cellar/gemfire/9.2.0/libexec/lib/geode-dependencies.jar
+  Library Path:
+    /Users/dpalaia/Library/Java/Extensions
+    /Library/Java/Extensions
+    /Network/Library/Java/Extensions
+    /System/Library/Java/Extensions
+    /usr/lib/java
+    .
+  System Properties:
+      awt.toolkit = sun.lwawt.macosx.LWCToolkit
+      file.encoding = UTF-8
+      file.encoding.pkg = sun.io
+      file.separator = /
+      gemfire.cache-xml-file = /Users/dpalaia/ericsson/gemfire-scripts/collev/cache/cache.xml
+      gemfire.launcher.registerSignalHandlers = true
+      gemfire.start-dev-rest-api = false
+      gemfire.use-cluster-configuration = true
+      gopherProxySet = false
+      java.awt.graphicsenv = sun.awt.CGraphicsEnvironment
+      java.awt.headless = true
+      java.awt.printerjob = sun.lwawt.macosx.CPrinterJob
+      java.class.version = 52.0
+      java.endorsed.dirs = /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/endorsed
+      java.ext.dirs = /Users/dpalaia/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+      java.home = /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre
+      java.io.tmpdir = /var/folders/w0/w1p4cqgd0bg8rzw7mz129rbw0000gn/T/
+      java.runtime.name = Java(TM) SE Runtime Environment
+      java.runtime.version = 1.8.0_151-b12
+      java.specification.name = Java Platform API Specification
+      java.specification.vendor = Oracle Corporation
+      java.specification.version = 1.8
+      java.vendor = Oracle Corporation
+      java.vendor.url = http://java.oracle.com/
+      java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+      java.version = 1.8.0_151
+      java.vm.info = mixed mode
+      java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+      java.vm.specification.name = Java Virtual Machine Specification
+      java.vm.specification.vendor = Oracle Corporation
+      java.vm.specification.version = 1.8
+      java.vm.vendor = Oracle Corporation
+      java.vm.version = 25.151-b12
+      jna.platform.library.path = /usr/lib:/usr/lib
+      jnidispatch.path = /var/folders/w0/w1p4cqgd0bg8rzw7mz129rbw0000gn/T/jna-1855415330/jna5121114223180880980.tmp
+      line.separator = 
+      os.version = 10.15.6
+      path.separator = :
+      sun.arch.data.model = 64
+      sun.boot.class.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/classes
+      sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib
+      sun.cpu.endian = little
+      sun.cpu.isalist = 
+      sun.io.unicode.encoding = UnicodeBig
+      sun.java.command = org.apache.geode.distributed.ServerLauncher start server0 --server-port=40404
+      sun.java.launcher = SUN_STANDARD
+      sun.jnu.encoding = UTF-8
+      sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+      sun.nio.ch.bugLevel = 
+      sun.os.patch.level = unknown
+      sun.rmi.dgc.server.gcInterval = 9223372036854775806
+      user.country = GB
+      user.language = en
+      user.timezone = Europe/Rome
+  Log4J 2 Configuration:
+      jar:file:/usr/local/Cellar/gemfire/9.2.0/libexec/lib/geode-core-9.2.0.jar!/log4j2.xml
+  ---------------------------------------------------------------------------
+  
+
+[info 2020/11/27 16:55:42.372 CET server0 <main> tid=0x1] Running in local mode since no locators were specified.
+
+[info 2020/11/27 16:55:42.456 CET server0 <main> tid=0x1] Requesting cluster configuration
+
+[info 2020/11/27 16:55:42.515 CET server0 <main> tid=0x1] Initializing region _monitoringRegion_192.168.1.7<v-1>0
+
+[info 2020/11/27 16:55:42.521 CET server0 <main> tid=0x1] Initialization of region _monitoringRegion_192.168.1.7<v-1>0 completed
+
+[info 2020/11/27 16:55:42.830 CET server0 <main> tid=0x1] Loading previously deployed jars
+
+[info 2020/11/27 16:55:42.832 CET server0 <main> tid=0x1] Initializing cache using "file:/Users/dpalaia/ericsson/gemfire-scripts/collev/cache/cache.xml":
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE cache PUBLIC
+      "-//GemStone Systems, Inc.//GemFire Declarative Caching 8.0//EN"
+      "http://www.gemstone.com/dtd/gfcpp-cache8000.dtd">
+  <!-- Sample cache.xml file -->
+  <!-- Example Declarative Cache Initialization with cache.xml -->
+  <client-cache>
+  <pool name="locatorPool">
+  <locator host="localhost" port="10334"/>
+  </pool>
+  <region name=”Cars">
+  <region-attributes refid="LOCAL" pool-name="locatorPool"/>
+  </region>
+  <region name="Manufacturers">
+  <region-attributes refid="LOCAL"/>
+  </region>
+
+[info 2020/11/27 16:56:58.550 CET server0 <main> tid=0x1] GemFireCache[id = 976827477; isClosing = true; isShutDownAll = false; created = Fri Nov 27 16:55:42 CET 2020; server = false; copyOnRead = false; lockLease = 120; lockTimeout = 60]: Now closing.

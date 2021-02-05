@@ -1,0 +1,14 @@
+
+[info 2020/11/27 16:11:25.995 CET <main> tid=0x1] Log opened with new distributed system connection.  View[192.168.1.7(loc0:32553:locator)<ec><v0>:1024|0] members: [192.168.1.7(loc0:32553:locator)<ec><v0>:1024]
+
+[info 2020/11/27 16:12:09.220 CET <DM-MemberEventInvoker> tid=0x17] A new member joined: 192.168.1.7(server0:33081)<v1>:1025.  View[192.168.1.7(loc0:32553:locator)<ec><v0>:1024|1] members: [192.168.1.7(loc0:32553:locator)<ec><v0>:1024, 192.168.1.7(server0:33081)<v1>:1025{lead}]
+
+[info 2020/11/27 16:19:09.926 CET <DM-MemberEventInvoker> tid=0x17] A new member joined: 192.168.1.7(server0:36963)<v3>:1025.  View[192.168.1.7(loc0:32553:locator)<ec><v0>:1024|3] members: [192.168.1.7(loc0:32553:locator)<ec><v0>:1024, 192.168.1.7(server0:36963)<v3>:1025{lead}]
+
+[info 2020/11/27 16:23:01.526 CET <DM-MemberEventInvoker> tid=0x17] A new member joined: 192.168.1.7(server0:39665)<v5>:1025.  View[192.168.1.7(loc0:32553:locator)<ec><v0>:1024|5] members: [192.168.1.7(loc0:32553:locator)<ec><v0>:1024, 192.168.1.7(server0:39665)<v5>:1025{lead}]
+
+[info 2020/11/27 16:35:25.821 CET <DM-MemberEventInvoker> tid=0x17] A new member joined: 192.168.1.7(server0:47044)<v7>:1025.  View[192.168.1.7(loc0:32553:locator)<ec><v0>:1024|7] members: [192.168.1.7(loc0:32553:locator)<ec><v0>:1024, 192.168.1.7(server0:47044)<v7>:1025{lead}]
+
+[info 2020/11/27 16:42:42.198 CET <DM-MemberEventInvoker> tid=0x17] A new member joined: 192.168.1.7(server0:51625)<v9>:1025.  View[192.168.1.7(loc0:32553:locator)<ec><v0>:1024|9] members: [192.168.1.7(loc0:32553:locator)<ec><v0>:1024, 192.168.1.7(server0:51625)<v9>:1025{lead}]
+
+[info 2020/11/27 16:46:22.101 CET <DM-MemberEventInvoker> tid=0x17] A new member joined: 192.168.1.7(server0:54405)<v11>:1025.  View[192.168.1.7(loc0:32553:locator)<ec><v0>:1024|11] members: [192.168.1.7(loc0:32553:locator)<ec><v0>:1024, 192.168.1.7(server0:54405)<v11>:1025{lead}]
